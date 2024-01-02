@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/style.css">
+
+    <!--bootstrap stylesheet-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="container header">
+        <div class="row d-flex justify-content-between align-items-center">
+            <div class="headerlogo">
+                <img src="../MyProject/Images/images.png" alt="Logo">
+            </div>
+
+            <div class="footerlogo">
+                <p id="EN">EN</p>
+                <p id="FR">FR</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="formcontent">
+            <h2>Sign up and let's stay connected.</h2>
+            <form class="was-validated" novalidate>
+                <p>To receive information and updates, please complete the form below.</p>
+                
+                
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="f_name">First name</label>
+                        <input type="text" class="form-control" id="f_name" required>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback"></div>
+                    </div>       
+                    
+                    <div class="form-group col">
+                        <label for="lname">Last name</label>
+                        <input type="text" class="form-control" id="lname" required>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div> 
+                
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="email">Email address</label>
+                        <input type="text" class="form-control" id="email" required>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    
+                    <div class="form-group col">
+                        <label for="c_email">Confirm email address</label>
+                        <input type="text" class="form-control" id="c_email" required>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="specialty">Specialty</label>
+                        <select class="form-control" id="specialty" required>
+                            <option value="" disabled selected>Please choose an option</option>
+                            <option>Epiliptologist</option>
+                            <option>Nurse</option>
+                            <option>General Neurologist</option>
+                            <option>Pharmacist</option>
+                            <option>Other</option>
+                        </select>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="location">Province/territory of practice</label>
+                        <select class="form-control" id="location" required>
+                            <option value="" disabled selected>Please choose an option</option>
+                            <option>Alberta</option>
+                            <option>British Columbia</option>
+                            <option>Manitoba</option>
+                            <option>Ontario</option>
+                            <option>Yukon</option>
+                            <option>Quebec</option>
+                        </select>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="l_number">License number</label>
+                        <input type="number" class="form-control" id="l_number" required>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <p>By submitting this form, I understand that information collected will be used in accordance with <a href="#">Paladin's Privacy Notice</a></p>
+                <div class="row">
+                    <!-- Button trigger modal -->
+                    <button type="button" id="submit-btn" data-toggle="modal" data-target="#exampleModalCenter">
+                        Submit
+                    </button>
+                    <p id="field">*Required Field.</p>
+                </div>
+            </div>      
+            </form>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <br><br>
+    
+                        <p id="agree">You are now leaving URL TBD and moving to an external website,<br>
+                            Click OK to continue or CANCEL to return to URL TBD.
+                        </p>
+                        <button type="button" id="submit-btn1" data-toggle="modal" data-target="#exampleModalCenter1" data-dismiss="modal">OK</button>
+                        <button type="button" id="cancel-btn" data-dismiss="modal">CANCEL</button>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    
+        <!--Second Modal-->
+        <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <br><br>
+    
+                        <p id="agree">Thanks for signing up!</p>
+                        <button type="button" id="close-btn" data-dismiss="modal">CLOSE</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </main>
+
+    <footer class="container">
+        <div class="row">
+            <div class="footerlogo">
+                <img src="../MyProject/Images/images.png" alt="Logo 1">
+            </div>
+
+            <div class="footerlogo">
+                <p class="copyright">&copy; 2023 Paladin Labs Inc, St-Laurent, QC</p> 
+            </div>
+            
+            <div class="footerlogo">
+              <img src="../MyProject/Images/icon.png" alt="Logo2" id="icon-img">
+            </div>
+        </div>
+    </footer>
+
+    <!---Bootstrap links-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    </main>
+</body>
+</html>
